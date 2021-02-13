@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatsumotoUI", "MatsumotoUI.csproj", "{C1272620-956F-4CB6-B24A-35ECE72A853A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1272620-956F-4CB6-B24A-35ECE72A853A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1272620-956F-4CB6-B24A-35ECE72A853A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1272620-956F-4CB6-B24A-35ECE72A853A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1272620-956F-4CB6-B24A-35ECE72A853A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B1EA646-5ADC-421D-BA61-9A400CADD5D3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,66 @@
+@page "/"
+
+@using System.Net.Http
+@using MatsumotoUI.Models
+@inject HttpClient Http
+
+@code {
+    private StudyBook[] studyBookItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        studyBookItems = await Http.GetJsonAsync<StudyBook[]>("GetStudyBook");
+    }
+}
+
+@if (studyBookItems == null)
+{
+    <p>Lista não encontrada</p>
+}
+else
+{
+    foreach (var studyBook in studyBookItems)
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-7">
+                        <h4 class="card-title">@studyBook.Title</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">@studyBook.CreateDate</h6>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group float-right">
+                            <div class="form-inline btn btn-secondary">Btn1</div>
+                            <div class="form-inline btn btn-secondary">Btn1</div>
+                            <div class="form-inline btn btn-secondary">Btn1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="card-text">
+                    @studyBook.Description
+                </p>
+
+                <nav class="nav flex-column">
+                    @if (studyBook.Questions != null)
+                    {
+                        foreach (var question in studyBook.Questions)
+                        {
+                            <a class="nav-link" href="#">
+                                <div class="alert alert-success p-5" role="alert">
+                                    <strong>@question.Title </strong>
+                                </div>
+                            </a>
+                        }
+                    }
+                </nav>
+                
+
+            </div>
+        </div>
+
+     
+       
+
+    }
+}
